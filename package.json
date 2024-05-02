@@ -1,0 +1,63 @@
+{
+  "name": "vscode-auto-hide-panel",
+  "version": "0.0.1",
+  "displayName": "Auto Hide Panel",
+  "description": "Automatically hide the unnecessary panels when the user writes into a text editor.",
+  "main": "./out/extension.js",
+  "author": "Taras Shashurin",
+  "publisher": "amurisavemylifee",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amurisavemylifee/vscode-auto-hide-panel"
+  },
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/node": "20.2.5",
+    "@types/vscode": "^1.80.0",
+    "glob": "^8.1.0",
+    "typescript": "^5.1.3"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Auto Hide Configuration",
+      "properties": {
+        "vscode-auto-hide-panel.autoHideSideBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically hide the side bar when the user starts typing into a text editor."
+        },
+        "vscode-auto-hide-panel.autoHideAuxiliaryBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically hide the auxiliary bar (second side bar) when the user starts typing into a text file."
+        },
+        "vscode-auto-hide-panel.autoHidePanel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically hide the panel (output, terminal, etc.) when the user starts typing into a text editor."
+        },
+        "vscode-auto-hide-panel.autoHideChangesCount": {
+          "type": "number",
+          "default": 5,
+          "description": "Number of changes before the panel is automatically hidden."
+        }
+      }
+    }
+  }
+}
