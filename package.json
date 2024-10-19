@@ -1,6 +1,6 @@
 {
   "name": "vscode-auto-hide-panel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "displayName": "Auto Hide Panel",
   "description": "Automatically hide the unnecessary panels when the user writes into a text editor.",
   "main": "./out/extension.js",

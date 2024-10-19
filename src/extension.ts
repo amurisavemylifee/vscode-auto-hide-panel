@@ -6,6 +6,7 @@ let changesCounter = 0;
 
 export function activate() {
   vscode.workspace.onDidChangeTextDocument((event) => {
+    if (!event.contentChanges.length) return;
     if (
       event.document.uri.path !==
       vscode.window.activeTextEditor?.document.uri.path
